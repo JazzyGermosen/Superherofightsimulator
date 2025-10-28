@@ -24,8 +24,11 @@ public class ShowdownApp {
         }else{
             System.out.println("JazzyLi is dead as hell");
         }
-
+        //this is making the people fight each other
         eric.fight(jazzyli);
+        jazzyli.fight(eric);
+
+
 
 
     }

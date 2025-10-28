@@ -4,10 +4,21 @@ public class SuperPerson {
     private String name;
     private int health;
     private int experiencePoints;
+    private String axe;
+    private String sword;
+    private String lance;
+    private String magic;
 
-    public SuperPerson(String name, int health){
+    //
+
+
+    public SuperPerson(String name, int health, String axe, String sword, String lance, String magic){
         this.name = name;
         this.health = health;
+        this.axe = axe;
+        this.sword = sword;
+        this.lance = lance;
+        this.magic = magic;
     }
 
     public boolean isAlive(){
@@ -29,6 +40,19 @@ public class SuperPerson {
     // this method will allow a super person to fight another person
     public void fight(SuperPerson opponent){
         System.out.println(this.name + " is ready to fight" + opponent.getName());
+
+    }
+    // i want to create a method tht will be used for what weapon type is being used so axe, magic, sword or lance
+    public void hasAxe(){
+
+    }
+    public void hasLance(){
+
+    }
+    public void hasSword(){
+
+    }
+    public void hasMagic(){
 
     }
 
@@ -59,5 +83,37 @@ public class SuperPerson {
     // method that allows the superperson to tell us how they are doing
     public String getStatus(){
         return this.name + "has" + this.health + "health";
+    }
+
+    public String getAxe() {
+        return axe;
+    }
+
+    public void setAxe(String axe) {
+        this.axe = axe;
+    }
+
+    public String getSword() {
+        return sword;
+    }
+
+    public void setSword(String sword) {
+        this.sword = sword;
+    }
+
+    public String getLance() {
+        return lance;
+    }
+
+    public void setLance(String lance) {
+        this.lance = lance;
+    }
+
+    public String getMagic() {
+        return magic;
+    }
+
+    public void setMagic(String magic) {
+        this.magic = magic;
     }
 }
