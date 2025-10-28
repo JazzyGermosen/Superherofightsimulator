@@ -1,9 +1,10 @@
 package com.pluralsight;
 
 public class SuperPerson {
-    private String name;
-    private int health;
-    private int experiencePoints;
+    protected String name;
+    protected int health;
+    protected int experiencePoints;
+    // i dont know what protected means but we are rolling with it since it seems like thats what fixed my code
     private String axe;
     private String sword;
     private String lance;
@@ -19,6 +20,7 @@ public class SuperPerson {
         this.sword = sword;
         this.lance = lance;
         this.magic = magic;
+        this.experiencePoints = experiencePoints;
     }
 
     public boolean isAlive(){
@@ -30,13 +32,15 @@ public class SuperPerson {
         // alternate code with one line of code
         // return this.health >0;
     }
-    public void takeDamage(int amount){
+    public void takeDamage(int amountOfDamage){
         this.health -= amountOfDamage;
 
         if(this.health < 0 ){
             this.health = 0;
         }
     }
+
+
     // this method will allow a super person to fight another person
     public void fight(SuperPerson opponent){
         System.out.println(this.name + " is ready to fight" + opponent.getName());
@@ -56,7 +60,7 @@ public class SuperPerson {
 
     }
 
-    public String getName() {+
+    public String getName() {
         return name;
     }
 
