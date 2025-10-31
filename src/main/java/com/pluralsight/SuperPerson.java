@@ -5,10 +5,11 @@ public class SuperPerson {
     protected int health;
     protected int experiencePoints;
     // i dont know what protected means but we are rolling with it since it seems like thats what fixed my code
-    private String axe;
-    private String sword;
-    private String lance;
-    private String magic;
+    //when we use private a child class will inherit the properties but the will not be able to access it
+    protected String axe;
+    protected String sword;
+    protected String lance;
+    protected String magic;
 
     //
 
