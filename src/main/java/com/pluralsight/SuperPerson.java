@@ -10,6 +10,8 @@ public class SuperPerson {
     protected String sword;
     protected String lance;
     protected String magic;
+    protected int darkMage;
+    protected int divinePriest;
 
     //
 
@@ -120,5 +122,21 @@ public class SuperPerson {
 
     public void setMagic(String magic) {
         this.magic = magic;
+    }
+
+    public int getDarkMage() {
+        return darkMage;
+    }
+
+    public void setDarkMage(int darkMage) {
+        this.darkMage = darkMage;
+    }
+
+    public int getDivinePriest() {
+        return divinePriest;
+    }
+
+    public void setDivinePriest(int divinePriest) {
+        this.divinePriest = divinePriest;
     }
 }
