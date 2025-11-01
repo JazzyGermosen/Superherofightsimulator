@@ -23,6 +23,8 @@ public class SuperVillan extends SuperPerson {
             System.out.println(this.getName() + " HA HA U MISSED LOSER");
         }else{
             System.out.println(this.getName() + " hits " + opponent.getName() + " for  " + totalDamage + " damage ");
+            //making it so that the opponent actuallty takes damage
+            opponent.takeDamage(totalDamage);
         }
     }
 }

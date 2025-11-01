@@ -37,6 +37,8 @@ public class SuperHero extends SuperPerson {
             System.out.println(this.getName() + "HA HA U MISSED LOSER!");
         }else{
             System.out.println(this.getName() + " hits " + opponent.getName() + " for " + totalDamage + " damage ");
+            // this is what causes the opponent to actually take damage
+            opponent.takeDamage(totalDamage);
         }
     }
 }
