@@ -40,32 +40,17 @@ public class SuperPerson {
     }
     public void takeDamage(int amountOfDamage){
         this.health -= amountOfDamage;
-
+        // this is essentially saying if the user health takes damage and falls below 0 then will reset back to 0
         if(this.health < 0 ){
             this.health = 0;
         }
     }
-
 
     // this method will allow a super person to fight another person
     public void fight(SuperPerson opponent){
         System.out.println(this.name + " is ready to fight" + opponent.getName());
 
     }
-    // i want to create a method tht will be used for what weapon type is being used so axe, magic, sword or lance
-    public void hasAxe(){
-
-    }
-    public void hasLance(){
-
-    }
-    public void hasSword(){
-
-    }
-    public void hasMagic(){
-
-    }
-
     public String getName() {
         return name;
     }
@@ -95,51 +80,36 @@ public class SuperPerson {
         return this.name + "has" + this.health + "health";
     }
 
-    public String getAxe() {
-        return axe;
+    public int getStrength() {
+        return strength;
     }
 
-    public void setAxe(String axe) {
-        this.axe = axe;
+    public void setStrength(int strength) {
+        this.strength = strength;
     }
 
-    public String getSword() {
-        return sword;
+    public int getSpeed() {
+        return speed;
     }
 
-    public void setSword(String sword) {
-        this.sword = sword;
+    public void setSpeed(int speed) {
+        this.speed = speed;
     }
 
-    public String getLance() {
-        return lance;
+    public int getDefense() {
+        return defense;
     }
 
-    public void setLance(String lance) {
-        this.lance = lance;
+    public void setDefense(int defense) {
+        this.defense = defense;
     }
 
-    public String getMagic() {
-        return magic;
+    public int getLuck() {
+        return luck;
     }
 
-    public void setMagic(String magic) {
-        this.magic = magic;
+    public void setLuck(int luck) {
+        this.luck = luck;
     }
 
-    public int getDarkMage() {
-        return darkMage;
     }
-
-    public void setDarkMage(int darkMage) {
-        this.darkMage = darkMage;
-    }
-
-    public int getDivinePriest() {
-        return divinePriest;
-    }
-
-    public void setDivinePriest(int divinePriest) {
-        this.divinePriest = divinePriest;
-    }
-}

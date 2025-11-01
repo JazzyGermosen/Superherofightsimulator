@@ -3,9 +3,9 @@ package com.pluralsight;
 import java.util.Random;
 
 public class SuperVillan extends SuperPerson {
-    public SuperVillan(String name, int health, String axe, String sword, String lance, String magic, int darkMage){
+    public SuperVillan(String name, int health, int strength, int speed, int defense, int luck){
         //call the parent constructor with the super() method
-        super(name, health, axe, sword, lance, magic);
+        super(name, health,  strength, speed, defense, luck);
 
         //set the exerience points to the evilness value
         // intellej is saying that evilness is not defined which makes sense

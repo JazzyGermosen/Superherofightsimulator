@@ -9,10 +9,10 @@ public class ShowdownApp {
         that will effect how the much damage the fighters do. replace some of the characteristics with
         values that effect the amount of damage done and if it is missed or not.
          */
-        // JazzyLi will have 45 sth,10 spd, 20 def, 15 lck
-        // EvilEric will have 30 sth, 20 spd,
-        SuperPerson JazzyLi = new SuperPerson("JazzyLi");
-        SuperPerson EvilEric = new SuperVillan("EvilEric");
+        // JazzyLi will have 45 sth,15 spd, 25 def, 15 lck
+        // EvilEric will have 35 sth, 20 spd, 20 def, 25 luck
+        SuperPerson JazzyLi = new SuperPerson("JazzyLi", 100, 45, 15, 25, 15);
+        SuperPerson EvilEric = new SuperVillan("EvilEric", 100,);
     }
         /* create 2 super people
         SuperPerson eric = new SuperPerson("eric");
