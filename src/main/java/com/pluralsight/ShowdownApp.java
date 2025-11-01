@@ -2,7 +2,19 @@ package com.pluralsight;
 
 public class ShowdownApp {
     public static void main(String[] args) {
-        // create 2 super people
+        // going to create fighters
+        /*
+        when creating the fighters they need more characteristics because thats what the super person
+        says. instead of adding the weapons into the characteristics i should make them into methods
+        that will effect how the much damage the fighters do. replace some of the characteristics with
+        values that effect the amount of damage done and if it is missed or not.
+         */
+        // JazzyLi will have 45 sth,10 spd, 20 def, 15 lck
+        // EvilEric will have 30 sth, 20 spd,
+        SuperPerson JazzyLi = new SuperPerson("JazzyLi");
+        SuperPerson EvilEric = new SuperVillan("EvilEric");
+    }
+        /* create 2 super people
         SuperPerson eric = new SuperPerson("eric");
         SuperPerson jazzyli = new SuperPerson("jazzyli");
 
@@ -27,9 +39,5 @@ public class ShowdownApp {
         //this is making the people fight each other
         eric.fight(jazzyli);
         jazzyli.fight(eric);
-
-
-
-
-    }
+        */
 }

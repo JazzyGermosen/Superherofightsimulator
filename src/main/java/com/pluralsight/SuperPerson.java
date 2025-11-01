@@ -1,29 +1,32 @@
 package com.pluralsight;
 
+import com.sun.source.tree.UsesTree;
+
 public class SuperPerson {
     protected String name;
     protected int health;
     protected int experiencePoints;
     // i dont know what protected means but we are rolling with it since it seems like thats what fixed my code
     //when we use private a child class will inherit the properties but the will not be able to access it
-    protected String axe;
-    protected String sword;
-    protected String lance;
-    protected String magic;
-    protected int darkMage;
-    protected int divinePriest;
+    // strength - how strong super person is
+    // speed - how fast super is ( if superperson speed is greater then opponent then attack twice )
+    // defense - how bulky the super person is
+    // luck - determines how likely someone will be able to land a hit
+    protected int strength;
+    protected int speed;
+    protected int defense;
+    protected int luck;
 
-    //
+    // these are all predefined characteristics a super person will have
 
-
-    public SuperPerson(String name, int health, String axe, String sword, String lance, String magic){
+    public SuperPerson(String name, int health, int strength, int speed, int defense, int luck){
         this.name = name;
         this.health = health;
-        this.axe = axe;
-        this.sword = sword;
-        this.lance = lance;
-        this.magic = magic;
-        this.experiencePoints = experiencePoints;
+        this.speed = speed;
+        this.defense = defense;
+        this.strength = strength;
+        this.luck = luck;
+
     }
 
     public boolean isAlive(){
