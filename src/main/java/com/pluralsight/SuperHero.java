@@ -23,7 +23,16 @@ public class SuperHero extends SuperPerson {
     ^^ i dont know why this wawsnt working, it seems it might be because i automatically entered in (int divine priest)
         */
     @Override
-    public void fight(SuperPerson opponent){
+    public void fight(SuperPerson attacker, SuperPerson enemy, CombatPhase phase){
+        // creating variables for the person who is initiating
+        SuperPerson initiator = (phase == CombatPhase.SUPERHERO_TURN) ? SuperHero : SuperVillan;
+        SuperPerson defender = (phase == CombatPhase.SUPERVILLAN_TURN) ? SuperVillan : SuperHero;
+
+        System.out.println("=== " + phase + " ===");
+        System.out.println(initiator.getName() + " is fighting " + defender.getName());
+
+        //doing a speed check
+        checkDouble(attacker, enemy);
         // Random is a function that can be used to generate random number
         Random rand = new Random();
         // in this statement we will choose a number between 0 and 101
@@ -36,9 +45,11 @@ public class SuperHero extends SuperPerson {
         if(baseDamage == 0){
             System.out.println(this.getName() + "HA HA U MISSED LOSER!");
         }else{
-            System.out.println(this.getName() + " hits " + opponent.getName() + " for " + totalDamage + " damage ");
+            System.out.println(this.getName() + " hits " + enemy.getName() + " for " + totalDamage + " damage ");
             // this is what causes the opponent to actually take damage
-            opponent.takeDamage(totalDamage);
+            enemy.takeDamage(totalDamage);
         }
+        logHit(attacker, enemy);
+        printBattleLog();
     }
 }
