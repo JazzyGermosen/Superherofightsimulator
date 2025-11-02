@@ -3,14 +3,15 @@ package com.pluralsight;
 import java.util.Random;
 
 public class SuperVillan extends SuperPerson {
-    public SuperVillan(String name, int health, int strength, int speed, int defense, int luck){
+    public SuperVillan(String name, int health, int strength, int speed, int defense, int luck, int level){
         //call the parent constructor with the super() method
         super(name, health,  strength, speed, defense, luck);
 
         //set the exerience points to the evilness value
         // intellej is saying that evilness is not defined which makes sense
         //it was not defined LOL
-        this.experiencePoints = darkMage;
+        this.experiencePoints = level;
+        // setting the experience points to level because while reading it doesnt make sense so yea :/
     }
     @Override
     public void fight(SuperPerson opponent){

@@ -29,6 +29,22 @@ public class SuperPerson {
 
     }
 
+    // creating a method in the super person class to call for a speed check when a fight occurs
+    public static void checkDouble(SuperPerson attacker, SuperVillan defender){
+        // creating a variable that will check for the speed difference between the super person and villian
+        int speedDifference = attacker.getSpeed() - defender.getSpeed();
+        // creating a if statement to determine who gets to make a follow up attack
+        if (speedDifference >= 5){
+            // ^ this is saying if the speed difference is greater than or equal to 5
+            System.out.println(attacker.getName() + " makes a follow up attack");
+        } else if (speedDifference <= -5) {
+            System.out.println(defender.getName() + " makes a follow up attack");
+        }else {
+            System.out.println("Neither unit can make a follow up attack");
+        }
+        // when the fight is occuring we will use checkDouble( superPerson, superVillan) to check
+    }
+
     public boolean isAlive(){
         if(this.health > 0 ){
             return true;
