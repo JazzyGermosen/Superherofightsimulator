@@ -45,6 +45,8 @@ public class SuperPerson {
         // when the fight is occuring we will use checkDouble( superPerson, superVillan) to check
     }
 
+    public void logHit (SuperPerson opponent)
+
     public boolean isAlive(){
         if(this.health > 0 ){
             return true;
