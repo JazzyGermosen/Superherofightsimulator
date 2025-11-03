@@ -25,8 +25,9 @@ public class SuperHero extends SuperPerson {
     @Override
     public void fight(SuperPerson attacker, SuperPerson enemy, CombatPhase phase){
         // creating variables for the person who is initiating
-        SuperPerson initiator = (phase == CombatPhase.SUPERHERO_TURN) ? SuperHero : SuperVillan;
-        SuperPerson defender = (phase == CombatPhase.SUPERVILLAN_TURN) ? SuperVillan : SuperHero;
+        // this is essententially an iff else statement that is being assigned to a variable 
+        SuperPerson initiator = (phase == CombatPhase.SUPERHERO_TURN) ? attacker: enemy;
+        SuperPerson defender = (phase == CombatPhase.SUPERVILLAIN_TURN) ? enemy : attacker;
 
         System.out.println("=== " + phase + " ===");
         System.out.println(initiator.getName() + " is fighting " + defender.getName());

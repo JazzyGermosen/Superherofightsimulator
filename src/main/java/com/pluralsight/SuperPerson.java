@@ -20,7 +20,7 @@ public class SuperPerson {
     // ^^these are all predefined characteristics a super person will have
     public enum CombatPhase {
         SUPERHERO_TURN,
-        SUPERVILLAN_TURN
+        SUPERVILLAIN_TURN
         // creating an enum to clarify who's turn it is
     }
 
@@ -47,7 +47,7 @@ public class SuperPerson {
         }else {
             System.out.println("Neither unit can make a follow up attack");
         }
-        // when the fight is occuring we will use checkDouble( superPerson, superVillan) to check
+        // when the fight is occuring we will use checkDouble( superPerson, superVillain) to check
     }
 
     public void logHit (SuperPerson attacker, SuperPerson enemy){

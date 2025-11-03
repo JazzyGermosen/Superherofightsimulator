@@ -2,8 +2,8 @@ package com.pluralsight;
 
 import java.util.Random;
 
-public class SuperVillan extends SuperPerson {
-    public SuperVillan(String name, int health, int strength, int speed, int defense, int luck, int level){
+public class SuperVillain extends SuperPerson {
+    public SuperVillain(String name, int health, int strength, int speed, int defense, int luck, int level){
         //call the parent constructor with the super() method
         super(name, health,  strength, speed, defense, luck);
 
@@ -16,8 +16,8 @@ public class SuperVillan extends SuperPerson {
     @Override
     public void fight(SuperPerson attacker, SuperPerson enemy, CombatPhase phase){
         // creating variables for the person who is initiating
-        SuperPerson initiator = (phase == CombatPhase.SUPERHERO_TURN) ? SuperHero : SuperVillan;
-        SuperPerson defender = (phase == CombatPhase.SUPERVILLAN_TURN) ? SuperVillan : SuperHero;
+        SuperPerson initiator = (phase == CombatPhase.SUPERHERO_TURN) ? attacker : enemy;
+        SuperPerson defender = (phase == CombatPhase.SUPERVILLAIN_TURN) ? enemy : attacker;
 
         System.out.println("=== " + phase + " ===");
         System.out.println(initiator.getName() + " is fighting " + defender.getName());
