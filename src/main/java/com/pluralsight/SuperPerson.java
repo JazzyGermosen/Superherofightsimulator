@@ -52,7 +52,8 @@ public class SuperPerson {
 
     public void logHit (SuperPerson attacker, SuperPerson enemy){
         //this method will log the hit
-        String name = opponent.name;
+        String name = attacker.name;
+        String nameTwo = enemy.name;
         int count = battleLog.getOrDefault(name, 0);
         battleLog.put(name, count +1);
     }
